@@ -17,15 +17,13 @@
 <div align="center">
   <a href="https://huggingface.co/tencent/HunyuanCustom"><img src="https://img.shields.io/static/v1?label=HunyuanVideo&message=HuggingFace&color=yellow"></a> &ensp;
 </div>
------
-
 
 > [**HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation**](https://arxiv.org/pdf/2505.04512) <be>
 
 
 
 ## 🔥🔥🔥 News!!
-
+* May 12, 2025: 🔥 HunyuanCustom is available in Cloud-Native-Build (CNB) [HunyuanCustom](https://cnb.cool/tencent/hunyuan/HunyuanCustom).
 * May 8, 2025: 👋 We release the inference code and model weights of HunyuanCustom. [Download](models/README.md).
 
 
@@ -276,7 +274,7 @@ bash ./scripts/run_gradio.sh
 If you find [HunyuanCustom](https://arxiv.org/abs/2505.04512) useful for your research and applications, please cite using this BibTeX:
 
 ```BibTeX
-@misc{hu2025hunyuancustommultimodaldrivenarchitecturecustomized,
+@misc{hu2025hunyuancustom,
       title={HunyuanCustom: A Multimodal-Driven Architecture for Customized Video Generation}, 
       author={Teng Hu and Zhentao Yu and Zhengguang Zhou and Sen Liang and Yuan Zhou and Qin Lin and Qinglin Lu},
       year={2025},
