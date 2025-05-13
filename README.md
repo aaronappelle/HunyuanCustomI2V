@@ -23,8 +23,9 @@
 
 
 ## 🔥🔥🔥 News!!
+* May 13, 2025: 🎉 HunyuanCustom has been integrated into [ComfyUI-HunyuanVideoWrapper](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper/blob/develop/example_workflows/hyvideo_custom_testing_01.json) by [Kijai](https://github.com/kijai).
 * May 12, 2025: 🔥 HunyuanCustom is available in Cloud-Native-Build (CNB) [HunyuanCustom](https://cnb.cool/tencent/hunyuan/HunyuanCustom).
-* May 8, 2025: 👋 We release the inference code and model weights of HunyuanCustom. [Download](models/README.md).
+* May  8, 2025: 👋 We release the inference code and model weights of HunyuanCustom. [Download](models/README.md).
 
 
 ## 📑 Open-source Plan
