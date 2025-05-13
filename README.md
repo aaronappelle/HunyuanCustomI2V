@@ -34,7 +34,7 @@
   - Single-Subject Video Customization
     - [x] Inference 
     - [x] Checkpoints
-    - [ ] ComfyUI
+    - [x] ComfyUI
   - Audio-Driven Video Customization
   - Video-Driven Video Customization
   - Multi-Subject Video Customization
