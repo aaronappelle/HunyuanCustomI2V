@@ -165,7 +165,7 @@ In case of running into float point exception(core dump) on the specific GPU typ
 pip install nvidia-cublas-cu12==12.4.5.8
 export LD_LIBRARY_PATH=/opt/conda/lib/python3.8/site-packages/nvidia/cublas/lib/
 
-# Option 2: Forcing to explictly use the CUDA 11.8 compiled version of Pytorch and all the other packages
+# Option 2: Forcing to explicitly use the CUDA 11.8 compiled version of Pytorch and all the other packages
 pip uninstall -r requirements.txt  # uninstall all packages
 pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
