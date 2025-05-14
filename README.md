@@ -222,7 +222,7 @@ For example, to generate a video with 1 GPU, you can use the following command:
 cd HunyuanCustom
 
 export MODEL_BASE="./models"
-export CPU_OFFLOAD=1
+export DISABLE_SP=1
 export PYTHONPATH=./
 python hymm_sp/sample_gpu_poor.py \
     --input './assets/images/seg_woman_01.png' \
