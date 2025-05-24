@@ -1,1 +1,2 @@
 from .pipeline_hunyuan_video_custom import HunyuanVideoCustomPipeline
+from .pipeline_hunyuan_video_custom import HunyuanVideoPipelineI2V

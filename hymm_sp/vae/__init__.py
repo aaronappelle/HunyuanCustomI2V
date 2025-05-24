@@ -22,11 +22,22 @@ def load_vae(vae_type,
             vae = AutoencoderKLCausal3D.from_config(config, sample_size=sample_size)
         else:
             vae = AutoencoderKLCausal3D.from_config(config)
-        ckpt = torch.load(Path(vae_path) / "pytorch_model.pt", map_location=vae.device)
+        # ORIGINAL:
+        # ckpt = torch.load(Path(vae_path) / "pytorch_model.pt", map_location=vae.device)
+        # if "state_dict" in ckpt:
+        #     ckpt = ckpt["state_dict"]
+        # vae_ckpt = {k.replace("vae.", ""): v for k, v in ckpt.items() if k.startswith("vae.")}
+        # vae.load_state_dict(vae_ckpt)
+
+        # NEW FROM HunyuanVideo-I2V
+        vae_ckpt = Path(vae_path) / "pytorch_model.pt"
+        assert vae_ckpt.exists(), f"VAE checkpoint not found: {vae_ckpt}"
+        ckpt = torch.load(vae_ckpt, map_location=vae.device)
         if "state_dict" in ckpt:
             ckpt = ckpt["state_dict"]
-        vae_ckpt = {k.replace("vae.", ""): v for k, v in ckpt.items() if k.startswith("vae.")}
-        vae.load_state_dict(vae_ckpt)
+        if any(k.startswith("vae.") for k in ckpt.keys()):
+            ckpt = {k.replace("vae.", ""): v for k, v in ckpt.items() if k.startswith("vae.")}
+        vae.load_state_dict(ckpt)
 
         spatial_compression_ratio = vae.config.spatial_compression_ratio
         time_compression_ratio = vae.config.time_compression_ratio
